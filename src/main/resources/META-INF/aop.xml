@@ -1,0 +1,12 @@
+<!DOCTYPE aspectj PUBLIC "-//AspectJ//DTD//EN" "https://www.eclipse.org/aspectj/dtd/aspectj.dtd">
+<aspectj>
+
+    <weaver>
+        <!-- only weave classes in our application-specific packages and sub-packages -->
+        <include within="com.mcve.ltw.weaved.*"/>
+    </weaver>
+    <aspects>
+        <!-- weave in just this aspect -->
+        <aspect name="com.mcve.ltw.weaved.ProfilingAspect"/>
+    </aspects>
+</aspectj>
