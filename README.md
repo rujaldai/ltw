@@ -12,6 +12,7 @@ Execute bootRun task from build.gradle
 Notes:
 - 'org.springframework.boot:spring-boot-starter-web' is not required. It's just there so that application does not stop immediately after it starts. It can also be used to verify the change is working correctly
 - Spring data redis is there intentionally to replicate this issue. The application is supposed to have multiple datasource to confuse spring
+- I can use JpaRepository instead of CrudRepository to make it work but I don't think it's a proper solution as I have already annotated my entity with @Entity. To have a start of why that is happening we'll have to look at the stack overflow question above.
 
 ![image](https://github.com/rujaldai/ltw/assets/49880648/aa38bef1-e822-425e-953d-e336dc1b47c3)
 
