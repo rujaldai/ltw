@@ -3,3 +3,8 @@ MCVE for question: https://stackoverflow.com/questions/78606285/could-not-safely
 Could not safely identify store assignment for repository candidate interface even when the entity is annotated with jakarta.persistence.Entity
 
 The rest of the issue is posted in the stack overflow link above.
+
+To run:
+
+Execute bootRun task from build.gradle
+- This adds spring-instrumentation jar as a VM argument when running application
