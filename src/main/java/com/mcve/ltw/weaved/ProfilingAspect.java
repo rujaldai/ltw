@@ -22,5 +22,7 @@ public class ProfilingAspect {
 	}
 
 	@Pointcut("execution(public * com.mcve.ltw..*.*(..))")
-	public void methodsToBeProfiled(){}
+	public void methodsToBeProfiled(){
+		System.out.println("egewgerg");
+	}
 }
