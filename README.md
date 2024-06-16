@@ -13,6 +13,7 @@ Notes:
 - 'org.springframework.boot:spring-boot-starter-web' is not required. It's just there so that application does not stop immediately after it starts. It can also be used to verify the change is working correctly
 - Spring data redis is there intentionally to replicate this issue. The application is supposed to have multiple datasource to confuse spring
 
+![image](https://github.com/rujaldai/ltw/assets/49880648/aa38bef1-e822-425e-953d-e336dc1b47c3)
 
 
 ------------ Not related (For future reference)
