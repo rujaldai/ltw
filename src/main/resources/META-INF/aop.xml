@@ -3,10 +3,12 @@
 
     <weaver>
         <!-- only weave classes in our application-specific packages and sub-packages -->
-        <include within="com.mcve.ltw.weaved.*"/>
+        <include within="com.mcve.ltw..*"/>
+<!--        <include within="com..*"/>-->
+        <include within="org.springframework.data.jpa.repository.config.*"/>
     </weaver>
     <aspects>
         <!-- weave in just this aspect -->
-        <aspect name="com.mcve.ltw.weaved.ProfilingAspect"/>
+        <aspect name="com.mcve.ltw.weaved.JpaRepositoryAspect"/>
     </aspects>
 </aspectj>

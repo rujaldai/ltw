@@ -4,7 +4,8 @@ import com.mcve.ltw.entity.Users;
 import com.mcve.ltw.repository.UserRepository;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collections;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 @RestController
@@ -18,11 +19,17 @@ public class TestController {
 
     @GetMapping
     public List<Users> getUsers() {
-//        return userRepository.findAll();
-        return Collections.emptyList();
+        Iterator<Users> usersIterable = userRepository.findAll().iterator();
+        List<Users> users = new ArrayList<>();
+        while (usersIterable.hasNext()) {
+            users.add(usersIterable.next());
+        }
+        return users;
     }
+
     @PostMapping
     public void addUser(@RequestBody Users user) {
         userRepository.save(user);
     }
+
 }
